@@ -15,7 +15,7 @@ export const databaseProviders = [
         password: configService.getDatabaseConfig().password ,
         database: configService.getDatabaseConfig().database,
         entities: [
-            __dirname + '/entities/*.entity{.ts,.js}',
+             __dirname.split('database')[0] + 'modules/**/entities/**.entity{.ts,.js}',
         ],
         synchronize: true,
         // logging : true
